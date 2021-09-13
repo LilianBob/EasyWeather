@@ -1,2 +1,4 @@
-# Weather_App
- weather app created from the openWeatherMap weather API using jQuery's .get() method and JSON
+# easyWeather
+ ##### A simple weather app created using JavaScript Ajax/jQuery and the openWeatherMap API
+ ##### User can obtain weather information by city name
+
