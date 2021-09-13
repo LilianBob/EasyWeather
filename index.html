@@ -22,14 +22,16 @@
                 <div class="row justify-content-center mt-lg-5 btn-section">
                     <button class="city-btn"> Search </button>
                 </div>
-                <div class="row justify-content-center mt-lg-5 form-section">
+                <div class="row justify-content-center mt-lg-5">
                     <div class="col">
-                        <h1> search by city name </h1>
-                        <form class="city-form form-group">
-                            <input class="form-control col-lg-6" type="text" name="city" id="city-input" placeholder="type city name">
-                            <button type="button" class="city-form-btn"> Get weather </button>
-                        </form>
-                    </div>
+                        <section class="form-section">
+                            <form class="city-form">
+                                <h1>search by city and country</h1>
+                                <input type="text" name="city" id="city-input" placeholder="ex. Kent, US">
+                                <button type="button" class="city-form-btn" > Get weather </button>
+                            </form>
+                        </section>
+                    </div>  
                 </div>
             </div>
         </main>
@@ -54,7 +56,7 @@
                     <div class="col">
                         <div class="current-wheather">
                             <div class="weather-img"></div>
-                            <span class="weather-descrip"></span>
+                            <span class="weather-desc"></span>
                         </div>
                     </div>
                     <div class="col">
@@ -70,7 +72,7 @@
                         <div class="wind-pressure">
                             <ul>
                                 <li>Wind:<span class="wind"></span></li>
-                                <li>Humidity:<span class="humi"></span></li>
+                                <li>Humidity:<span class="hum"></span></li>
                                 <li>Pressure:<span class="pre"></span></li>
                             </ul>
                         </div>

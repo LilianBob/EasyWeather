@@ -59,64 +59,70 @@ section{
 }
 
 .form-section{
-    display: none;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    height: 40vh;
+    width: 50vw;
+    position: relative;
+    display: inline-block;
+    align-content: space-around;
+    justify-content: space-evenly;
+    overflow: hidden;
 }
-.form-section h1 {
-    text-align: center;
+
+.form-section form{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: grid;
+    align-content: space-around;
+    justify-content: space-evenly;
+    left: -100%;
+    visibility: hidden;
+}
+
+.form-section form h1{
     text-transform: capitalize;
     letter-spacing: 1.5px;
     font-size: 2rem;
-    color: rgb(19, 14, 14);
+    color: rgb(37, 17, 17);
     font-weight: lighter;
 }
 
-.form-section form {
-    margin-top: 20px;
-    padding: 10px;
-    width: 80%;
-    position: absolute;
-}
-
 .form-section form button{
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
+    height: 8vh;
     font-weight: bold;
     font-size: 1.5rem;
-    color: white;
+    color: rgb(37, 17, 17);
     background-color: transparent;
-    border: 1px solid white;
-    border-radius: 10px;
+    border: 1px solid rgb(37, 17, 17);
+    border-radius: 15px; 
     cursor: pointer;
     letter-spacing: 1.5px;
+    transition: all 0.5s;
 }
 
 .form-section form button:hover{
-    background-color: white;
-    color: #323232;
+    background-color: rgb(164, 201, 212);
+    color: #6193af;
     border-radius: 5px;
 }
 
 .form-section form input{
     height: 8vh;
-    border-radius: 5px;
-    border: 1px solid white;
+    border-radius: 15px;
+    border: 1px solid rgb(37, 17, 17);
     background-color: transparent;
     transition: all 0.5s ease-in-out;
     padding-left: 10px;
     font-weight: lighter;
     font-size: 1.1rem;
-    color: white;
+    color: rgb(37, 17, 17);
     position: relative;
 }
 
 .form-section form input::placeholder{
     font-weight: bold;
     font-size: 1.3rem;
-    color: white;
+    color: rgb(37, 17, 17)te;
     padding-left: 10px;
     text-transform: capitalize;
     letter-spacing: 0.2rem;
@@ -130,11 +136,10 @@ section{
 
 .form-section form input:focus{
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(116, 159, 184);
     border-radius: 0px;
     transition: all 0.5s ease-in-out;
 }
-
 section header{
     height: 100%;
     width: 100%;
