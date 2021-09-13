@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Open sans', sans-serif;
+}
+
+section{
+    position: relative;
+    overflow: hidden;
+}
+
+.choice-section .col{
+    background: url('sky.jpg');
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center;
+}
+
+.choice-section .col h1{
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    color: rgb(43, 11, 11);
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.btn-section button{
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: rgb(46, 41, 41);
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.5s;
+    background-color: transparent;
+}
+
+.btn-section button:hover{
+    border-radius: 3px;
+    background-color: rgba(219, 203, 203, 0.8);
+    color: #2b2121;
+}
+
+.btn-section button{
+    border-radius: 20px 3px 20px 3px;
+}
+
+.btn-section button:hover{
+    border-radius: 3px 20px 3px 20px;
+}
+
+.form-section{
+    display: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.form-section h1 {
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+    color: rgb(19, 14, 14);
+    font-weight: lighter;
+}
+
+.form-section form {
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+    position: absolute;
+}
+
+.form-section form button{
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
+
+.form-section form button:hover{
+    background-color: white;
+    color: #323232;
+    border-radius: 5px;
+}
+
+.form-section form input{
+    height: 8vh;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+    padding-left: 10px;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    color: white;
+    position: relative;
+}
+
+.form-section form input::placeholder{
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+    padding-left: 10px;
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+    transition: all 0.5s;
+}
+
+.form-section form input:focus::placeholder{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.form-section form input:focus{
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0px;
+    transition: all 0.5s ease-in-out;
+}
+
+section header{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    align-content: space-around;
+    justify-content: space-evenly;
+    grid-template-rows: 10vh 35vh 35vh;
+    grid-template-columns: 0.90fr;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    box-shadow: 0px 0px 5px 5px rgba(233, 226, 226, 0.5);
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.location{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.country{
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    color: #323232;
+}
+
+.go-back{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.date-time,.go-back{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.5);
+}
+
+.first-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.current-wheather{
+    height: 20vh;
+    width: 10vw;
+    display: grid;
+    align-content: space-around;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.weather-img>img{
+    height: 20vh;
+}
+
+.current-wheather>span{
+    color: #323232;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.temprature{
+    height: 15vh;
+    width: 13vw;
+    display: grid;
+    align-content: space-around;
+    justify-content: space-evenly;
+    grid-template-rows: 7vh 0.99fr;
+    grid-template-columns: 0.99fr;
+    text-align: center;
+    position: relative;
+}
+
+.current-temp>h1{
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 2.1rem;
+    color: #323232;
+}
+
+.min-max-temp{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+
+.min-max-temp>b{
+    font-size:1.7rem;
+    color: #323232;
+}
+
+.min-temp>h3{
+    font-weight: lighter;
+    font-size: 1.7rem;
+    color: rgba(0,0,0,0.5);
+}
+
+.max-temp>h3{
+    font-weight: lighter;
+    font-size: 1.7rem;
+    color: rgba(0,0,0,0.5);
+}
+
+.wind-pressure{
+    height: 18vh;
+    display: grid;
+}
+
+.wind-pressure>ul{
+    display: grid;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.wind-pressure>ul>li{
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    color: #323232;
+    font-weight: bold;
+}
+
+.wind-pressure>ul>li>span{
+    color: rgba(0,0,0,0.5);
+}
+
+.sec-row{
+    display: grid;
+    grid-template-rows: 0.99fr;
+    grid-template-columns: 0.99fr;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+
+.sec-row>ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sec-row>ul>li{
+    display: grid;
+    align-content: space-around;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.sec-row>ul>li>img{
+    height: 12vh;
+    width: 7vw;
+}
+
+.dt-txt{
+    padding-top: 10px;
+    font-weight: lighter;
+    font-size: 1.1rem;
+    color: #323232;
+}
+
+.next-day-temp{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 5vh;
+}
+
+.next-day-temp>h3{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.5);
+}
+
+.clear-sky-gif,.clouds-gif,.rain-gif,.snow-gif{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container{
+    margin-top: 50px;
+    padding: 20px;
+}

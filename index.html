@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weather </title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Open Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <main>
+            <div class="container">
+                <div class="row choice-section">
+                    <div class="col">
+                        <h1> Get Weather </h1>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-lg-5 btn-section">
+                    <button class="city-btn"> Search </button>
+                </div>
+                <div class="row justify-content-center mt-lg-5 form-section">
+                    <div class="col">
+                        <h1> search by city name </h1>
+                        <form class="city-form form-group">
+                            <input class="form-control col-lg-6" type="text" name="city" id="city-input" placeholder="type city name">
+                            <button type="button" class="city-form-btn"> Get weather </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <iframe width="540" height="300" class="clouds-gif" src="https://www.youtube.com/embed/z2UDZMu2GLU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="540" height="300" autoplay class="clear-sky-gif" src="https://www.youtube.com/embed/0_jNjpVxUt0"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="540" height="300" class="rain-gif" src="https://www.youtube.com/embed/QG0h4xE2YCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="540" height="300" class="snow-gif" src="https://www.youtube.com/embed/yamiiGk6aSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <header>
+            <div class="container">
+                <div class="row location">
+                    <div class="col">
+                        <h2 class="go-back"><i class="fas fa-arrow-left"></i></h2>
+                    </div>
+                    <div class="col">
+                        <h1 class="country"></h1>
+                    </div>
+                    <div class="col">
+                        <h2 class="date-time"></h2>
+                    </div>
+                </div>
+                <div class="row first-row">
+                    <div class="col">
+                        <div class="current-wheather">
+                            <div class="weather-img"></div>
+                            <span class="weather-descrip"></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="temprature">
+                            <div class="current-temp"></div>
+                            <div class="min-max-temp">
+                                <div class="min-temp"></div><b>/</b>
+                                <div class="max-temp"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="wind-pressure">
+                            <ul>
+                                <li>Wind:<span class="wind"></span></li>
+                                <li>Humidity:<span class="humi"></span></li>
+                                <li>Pressure:<span class="pre"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row sec-row">
+                    <div class="sec-row">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1ba2cf90f3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+</body>
+</html>
