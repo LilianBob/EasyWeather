@@ -10,8 +10,13 @@
  ##### Current weather will be displayed in a pop-up window or as an extra web page below the main page
  
  # For developer
- ##### Open the CLI within the directory you wish to have a clone
- ##### type  `git clone` and the paste this repository's url:
- ##### 
+ ##### Open the CLI (Bash or Git Bash) within the directory you wish to have a clone
+ ##### Type  `git clone` and the paste this repository's HTTPS clone url:
+ ##### `git clone https://github.com/LilianBob/EasyWeather.git`
+ ##### Press enter to execute the command and have your local clone
  
-
+ # Licencing
+ ##### See licence file
+ 
+ # Contributing
+ ##### Pull requests, suggestions for improvement, and bug identification are welcome.
