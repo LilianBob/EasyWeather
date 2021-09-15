@@ -1,6 +1,6 @@
 # EasyWeather
  ##### Info: A simple weather app created using JavaScript Ajax/jQuery and the openWeatherMap API
- ##### Author: [Lilian Robert](https://github.com)
+ ##### Author: [Lilian Robert](https://github.com/LilianBob)
  
 # Demo
 ![EasyWeather](https://user-images.githubusercontent.com/78000300/133505728-c9161853-772b-4be8-a401-4215dddb7274.gif)
