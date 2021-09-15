@@ -2,6 +2,7 @@
  ##### A simple weather app created using JavaScript Ajax/jQuery and the openWeatherMap API
  
 # Demo
+![EasyWeather](https://github.com/LilianBob/EasyWeather/EasyWeather.png)
 
 # Usage
  ##### User enters clicks on "Search" button
