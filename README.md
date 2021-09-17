@@ -3,10 +3,10 @@
  ##### Author: [Lilian Robert](https://github.com/LilianBob)
  
 # Demo
-![EasyWeather](https://user-images.githubusercontent.com/78000300/133505728-c9161853-772b-4be8-a401-4215dddb7274.gif)
+![EasyWeather_dem](https://user-images.githubusercontent.com/78000300/133756301-eea95350-35ca-4274-9cf4-66a63fab2038.gif)
 
 # Usage
- ##### User enters clicks on "Search" button
+ ##### User clicks on "Search" button
  ##### User types in the city name or city and country menu in the presented form
  ##### User clicks submit
  ##### Current weather will be displayed in a pop-up window or as an extra web page below the main page
