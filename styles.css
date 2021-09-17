@@ -20,7 +20,6 @@ section{
     display: flex;
     align-content: space-around;
     justify-content: space-evenly;
-    box-shadow: 0px 0px 8px 8px rgba(90, 182, 224, 0.5);
     border-radius: 10px;
     background-color: transparent;
 }
@@ -30,10 +29,13 @@ section{
     z-index: -1;
     flex-direction: column;
     margin-top: 20px;
+    box-shadow: 0px 0px 8px 8px #585454;
+    border-radius: 10px;
 }
 #main{
     flex-direction: column;
     margin-top: 20px;
+    box-shadow: 0px 0px 8px 8px #74b2e6;
 }
 .choice-section .col{
     background: url('sky.jpg');
