@@ -26,7 +26,7 @@ const mykey = 'efda3584fbacc97686c0c2166cf48e7a';
 $('.city-form-btn').click(function(){
     console.log(city_input.val())
     $.ajax({
-        url: `https://api.openweathermap.org/data/2.5/forecast?q=${city_input.val()}&appid=${mykey}`,
+        url: `https://api.openweathermap.org/data/2.5/forecast?q=${city_input.val()}&units=metric&appid=${mykey}`,
         method: "GET",
         cache: false,
         success: function (data) {
@@ -39,7 +39,7 @@ $('.city-form-btn').click(function(){
             $('#header').css({
                 opacity: "1",
                 visibility: "visible",
-                zIndex: "9",
+                zIndex: "1",
                 transition: "all 0.5s",
             });
             console.log(data)
@@ -52,7 +52,6 @@ $('.city-form-btn').click(function(){
 });
 
 const countrycode_input = $('#countrycode-input'),
-    // days = 5,
     date = new Date(), 
     newDate = date.toDateString();
 function renderToBody(data) {
@@ -63,14 +62,14 @@ function renderToBody(data) {
     $('.wind').html(`${data.list[0].wind.speed} kmph `)
     $('.hum').html(`${data.list[0].main.humidity} mm `)
     $('.pre').html(`${data.list[0].main.pressure} mb `)
-    $('.current-temp').html(`<h1>${Math.round(data.list[0].main.temp)}<b>'</b><b>C</b></h1>`)
-    $('.min-temp').html(`<h3>${Math.round(data.list[0].main.temp_min)}<b>'</b><b>C</b></h3>`)
-    $('.max-temp').html(`<h3>${Math.round(data.list[0].main.temp_max)}<b>'</b><b>C</b></h3>`)
-    $('.day1').html(`<p class="dt-txt">${data.list[1].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[1].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[1].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[1].main.temp_max)}<b>'</b><b>C</b></h3></div> `)
-    $('.day2').html(`<p class="dt-txt">${data.list[2].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[2].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[2].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[2].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
-    $('.day3').html(`<p class="dt-txt">${data.list[3].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[3].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[3].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[3].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
-    $('.day4').html(`<p class="dt-txt">${data.list[4].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[4].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[4].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[4].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
-    $('.day5').html(`<p class="dt-txt">${data.list[5].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[5].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[5].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[5].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
+    $('.current-temp').html(`<h1>${Math.round(data.list[0].main.temp)}<b>&deg;</b><b>C</b></h1>`)
+    $('.min-temp').html(`<h3>${Math.round(data.list[0].main.temp_min)}<b>&deg;</b><b>C</b></h3>`)
+    $('.max-temp').html(`<h3>${Math.round(data.list[0].main.temp_max)}<b>&deg;</b><b>C</b></h3>`)
+    $('.tm1').html(`<p class="dt-txt">${data.list[1].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[1].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[1].main.temp_min)}<b>&deg;</b><b>C</b></h3>/<h3>${Math.round(data.list[1].main.temp_max)}<b>&deg;</b><b>C</b></h3></div> `)
+    $('.tm2').html(`<p class="dt-txt">${data.list[2].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[2].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[2].main.temp_min)}<b>&deg;</b><b>C</b></h3><h3>${Math.round(data.list[2].main.temp_max)}<b>&deg;</b><b>C</b></h3></div>`)
+    $('.tm3').html(`<p class="dt-txt">${data.list[3].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[3].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[3].main.temp_min)}<b>&deg;</b><b>C</b></h3><h3>${Math.round(data.list[3].main.temp_max)}<b>&deg;</b><b>C</b></h3></div>`)
+    $('.tm4').html(`<p class="dt-txt">${data.list[4].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[4].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[4].main.temp_min)}<b>&deg;</b><b>C</b></h3><h3>${Math.round(data.list[4].main.temp_max)}<b>&deg;</b><b>C</b></h3></div>`)
+    $('.tm5').html(`<p class="dt-txt">${data.list[5].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[5].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[5].main.temp_min)}<b>&deg;</b><b>C</b></h3><h3>${Math.round(data.list[5].main.temp_max)}<b>&deg;</b><b>C</b></h3></div>`)
 
     if (data.list[0].weather[0].icon == '01d' && data.list[0].weather[0].icon == '01n') {
         $('.clear-sky-gif').css({
