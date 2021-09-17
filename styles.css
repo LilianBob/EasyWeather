@@ -6,7 +6,6 @@
     outline: none;
     font-family: 'Open sans', sans-serif;
 }
-
 section{
     position: relative;
     overflow: hidden;
@@ -42,7 +41,6 @@ section{
     background-size: cover !important;
     background-position: center;
 }
-
 .choice-section .col h1{
     text-align: center;
     text-transform: capitalize;
@@ -51,13 +49,12 @@ section{
     font-weight: bold;
     font-size: 2.5rem;
 }
-
 .btn-section button{
     padding: 20px;
     margin: 10px;
     text-align: center;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 2rem;
     text-transform: capitalize;
     letter-spacing: 1px;
     color: rgb(46, 41, 41);
@@ -167,20 +164,7 @@ section{
 }
 
 
-/* section header{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    display: flex;
-    align-content: space-around;
-    justify-content: space-evenly;
-    opacity: 0;
-    visibility: hidden;
-    z-index: -1;
-    box-shadow: 0px 0px 8px 8px rgba(109, 148, 192, 0.5);
-    border-radius: 10px;
-    background-color: transparent; */
-/* } */
+
 
 .location{
     display: flex;
@@ -216,9 +200,6 @@ section{
     height: 20vh;
     width: 10vw;
     display: block;
-    /* align-content: space-around;
-    justify-content: space-evenly;
-    justify-items: center; */
     margin:auto;
 } 
 

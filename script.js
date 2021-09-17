@@ -12,7 +12,6 @@ $('.go-back').click(function(){
         opacity: "1",
         visibility: "visible",
         position: "relative",
-        // zIndex: "1",
         transition: "all 0.5s",
     });
     $('#header').css({
@@ -35,7 +34,6 @@ $('.city-form-btn').click(function(){
                 opacity: "0",
                 visibility: "hidden",
                 position: "absolute",
-                // zIndex: "-1",
                 transition: "all 0.5s",
             });
             $('#header').css({
@@ -51,22 +49,10 @@ $('.city-form-btn').click(function(){
             console.log(data, status)
         }
     });
-    // $('main').css({
-    //     opacity: "0",
-    //     position: "absolute",
-    //     zIndex: "-1",
-    //     transition: "all 0.5s",
-    // });
-    // $('header').css({
-    //     opacity: "1",
-    //     visibility: "visible",
-    //     zIndex: "9",
-    //     transition: "all 0.5s",
-    // });
 });
 
 const countrycode_input = $('#countrycode-input'),
-    days = 5,
+    // days = 5,
     date = new Date(), 
     newDate = date.toDateString();
 function renderToBody(data) {
