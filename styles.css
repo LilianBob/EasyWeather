@@ -184,9 +184,9 @@ section{
 .weather-img img{
     height: 15vh;
 }
-.current-weather>span{
-    color: #291e1e;
-    font-size: 2rem;
+.weather-desc{
+    color: #14140e;
+    font-size: 1.5rem;
     text-transform: capitalize;
     letter-spacing: 1px;
 }
@@ -201,10 +201,10 @@ section{
     text-align: center;
     position: relative;
 }
-.current-temp>h1{
+.current-temp h1{
     padding-top: 15px;
     font-weight: bold;
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     color: #323232;
 }
 .min-max-temp{
@@ -251,7 +251,7 @@ section{
     align-items: center;
     justify-content: space-around;
 }
-.sec-row .day1, .day2, .day3, .day4, .day5{
+.sec-row .tm1, .tm2, .tm3, .tm4, .tm5{
     display: block;
     align-items: center;
     justify-content: center;
