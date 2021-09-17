@@ -3,7 +3,7 @@
  ##### Author: [Lilian Robert](https://github.com/LilianBob)
  
 # Demo
-![EasyWeather_demo2](https://user-images.githubusercontent.com/78000300/133753069-8a0195fd-368f-4984-8b2b-58eb050b905e.gif)
+![EasyWeather_dem](https://user-images.githubusercontent.com/78000300/133756301-eea95350-35ca-4274-9cf4-66a63fab2038.gif)
 
 # Usage
  ##### User enters clicks on "Search" button
