@@ -12,85 +12,79 @@
 </head>
 <body>
     <section>
-        <main>
-            <div class="container">
-                <div class="row choice-section">
-                    <div class="col">
-                        <h1> Get Weather </h1>
-                    </div>
-                </div>
-                <div class="row justify-content-center mt-lg-5 btn-section">
-                    <button class="city-btn"> Search </button>
-                </div>
-                <div class="row justify-content-center mt-lg-5">
-                    <div class="col">
-                        <section class="form-section">
-                            <form class="city-form">
-                                <h1>search by city and country</h1>
-                                <input type="text" name="city" id="city-input" placeholder="ex. Kent, US">
-                                <button type="button" class="city-form-btn" > Get weather </button>
-                            </form>
-                        </section>
-                    </div>  
+        <div class="container" id="main">
+            <div class="row choice-section">
+                <div class="col col-lg-12">
+                    <h1> Daily Weather </h1>
                 </div>
             </div>
-        </main>
+            <div class="row justify-content-center mt-5 btn-section">
+                <button class="city-btn"> Search </button>
+            </div>
+            <div class="row justify-content-center mt-5">
+                <div class="col">
+                    <section class="form-section">
+                        <form class="city-form">
+                            <h1>Type city or city/country</h1>
+                            <input type="text" name="city" id="city-input" placeholder="ex. Kent, US">
+                            <button type="button" class="city-form-btn" > Get weather </button>
+                        </form>
+                    </section>
+                </div>  
+            </div>
+        </div>
         <iframe width="540" height="300" class="clouds-gif" src="https://www.youtube.com/embed/z2UDZMu2GLU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="540" height="300" autoplay class="clear-sky-gif" src="https://www.youtube.com/embed/0_jNjpVxUt0"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="540" height="300" class="rain-gif" src="https://www.youtube.com/embed/QG0h4xE2YCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="540" height="300" class="snow-gif" src="https://www.youtube.com/embed/yamiiGk6aSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <header>
-            <div class="container">
-                <div class="row location">
-                    <div class="col">
-                        <h2 class="go-back"><i class="fas fa-arrow-left"></i></h2>
-                    </div>
-                    <div class="col">
-                        <h1 class="country"></h1>
-                    </div>
-                    <div class="col">
-                        <h2 class="date-time"></h2>
+        <div class="container" id="header">
+            <div class="row location mb-2">
+                <div class="col col-lg-auto">
+                    <h2 class="go-back"><i class="fas fa-arrow-left"></i></h2>
+                </div>
+                <div class="col col-lg-auto">
+                    <h1 class="country"></h1>
+                </div>
+                <div class="col col-lg-auto">
+                    <h2 class="date-time"></h2>
+                </div>
+            </div>
+            <div class="row first-row mb-4">
+                <div class="col">
+                    <div class="current-weather">
+                        <div class="weather-img"></div>
+                        <span class="weather-desc"></span>
                     </div>
                 </div>
-                <div class="row first-row">
-                    <div class="col">
-                        <div class="current-wheather">
-                            <div class="weather-img"></div>
-                            <span class="weather-desc"></span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="temprature">
-                            <div class="current-temp"></div>
-                            <div class="min-max-temp">
-                                <div class="min-temp"></div><b>/</b>
-                                <div class="max-temp"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="wind-pressure">
-                            <ul>
-                                <li>Wind:<span class="wind"></span></li>
-                                <li>Humidity:<span class="hum"></span></li>
-                                <li>Pressure:<span class="pre"></span></li>
-                            </ul>
+                <div class="col">
+                    <div class="temperature">
+                        <div class="current-temp"></div>
+                        <div class="min-max-temp">
+                            <div class="min-temp"></div><b>/</b>
+                            <div class="max-temp"></div>
                         </div>
                     </div>
                 </div>
-                <div class="row sec-row">
-                    <div class="sec-row">
+                <div class="col">
+                    <div class="wind-pressure">
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>Wind:<span class="wind"></span></li>
+                            <li>Humidity:<span class="hum"></span></li>
+                            <li>Pressure:<span class="pre"></span></li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </header>
+            <div class="row sec-row">
+                <div class="sec-row">
+                    <div class="col day1"></div>
+                    <div class="col day2"></div>
+                    <div class="col day3"></div>
+                    <div class="col day4"></div>
+                    <div class="col day5"></div>
+                </div>
+            </div>
+        </div>
     </section> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>

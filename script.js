@@ -7,7 +7,21 @@ $('.city-btn').click(function(){
             transition: "all 0.5s",
     });
 })
-
+$('.go-back').click(function(){
+    $('#main').css({
+        opacity: "1",
+        visibility: "visible",
+        position: "relative",
+        // zIndex: "1",
+        transition: "all 0.5s",
+    });
+    $('#header').css({
+        opacity: "0",
+        visibility: "hidden",
+        zIndex: "-1",
+        transition: "all 0.5s",
+    });
+});
 const city_input = $('#city-input');
 const mykey = 'efda3584fbacc97686c0c2166cf48e7a';
 $('.city-form-btn').click(function(){
@@ -17,16 +31,17 @@ $('.city-form-btn').click(function(){
         method: "GET",
         cache: false,
         success: function (data) {
-            $('.choice-section').css({
+            $('#main').css({
                 opacity: "0",
                 visibility: "hidden",
-                zIndex: "-1",
+                position: "absolute",
+                // zIndex: "-1",
                 transition: "all 0.5s",
             });
-            $('header').css({
+            $('#header').css({
                 opacity: "1",
                 visibility: "visible",
-                zIndex: "1",
+                zIndex: "9",
                 transition: "all 0.5s",
             });
             console.log(data)
@@ -36,6 +51,18 @@ $('.city-form-btn').click(function(){
             console.log(data, status)
         }
     });
+    // $('main').css({
+    //     opacity: "0",
+    //     position: "absolute",
+    //     zIndex: "-1",
+    //     transition: "all 0.5s",
+    // });
+    // $('header').css({
+    //     opacity: "1",
+    //     visibility: "visible",
+    //     zIndex: "9",
+    //     transition: "all 0.5s",
+    // });
 });
 
 const countrycode_input = $('#countrycode-input'),
@@ -53,11 +80,11 @@ function renderToBody(data) {
     $('.current-temp').html(`<h1>${Math.round(data.list[0].main.temp)}<b>'</b><b>C</b></h1>`)
     $('.min-temp').html(`<h3>${Math.round(data.list[0].main.temp_min)}<b>'</b><b>C</b></h3>`)
     $('.max-temp').html(`<h3>${Math.round(data.list[0].main.temp_max)}<b>'</b><b>C</b></h3>`)
-    $('.sec-row>ul>li:nth-child(1)').html(`<p class="dt-txt">${data.list[1].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[1].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[1].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[1].main.temp_max)}<b>'</b><b>C</b></h3></div> `)
-    $('.sec-row>ul>li:nth-child(2)').html(`<p class="dt-txt">${data.list[2].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[2].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[2].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[2].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
-    $('.sec-row>ul>li:nth-child(3)').html(`<p class="dt-txt">${data.list[3].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[3].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[3].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[3].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
-    $('.sec-row>ul>li:nth-child(4)').html(`<p class="dt-txt">${data.list[4].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[4].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[4].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[4].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
-    $('.sec-row>ul>li:nth-child(5)').html(`<p class="dt-txt">${data.list[5].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[5].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[5].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[5].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
+    $('.day1').html(`<p class="dt-txt">${data.list[1].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[1].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[1].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[1].main.temp_max)}<b>'</b><b>C</b></h3></div> `)
+    $('.day2').html(`<p class="dt-txt">${data.list[2].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[2].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[2].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[2].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
+    $('.day3').html(`<p class="dt-txt">${data.list[3].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[3].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[3].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[3].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
+    $('.day4').html(`<p class="dt-txt">${data.list[4].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[4].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[4].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[4].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
+    $('.day5').html(`<p class="dt-txt">${data.list[5].dt_txt}</p><img src=http://openweathermap.org/img/wn/${data.list[5].weather[0].icon}@2x.png> <div class="next-day-temp"><h3>${Math.round(data.list[5].main.temp_min)}<b>'</b><b>C</b></h3><h3>${Math.round(data.list[5].main.temp_max)}<b>'</b><b>C</b></h3></div>`)
 
     if (data.list[0].weather[0].icon == '01d' && data.list[0].weather[0].icon == '01n') {
         $('.clear-sky-gif').css({
@@ -125,17 +152,3 @@ function renderToBody(data) {
     }
 }
 
-$('.go-back').click(function(){
-    $('.choice-section').css({
-        opacity: "1",
-        visibility: "visible",
-        zIndex: "1",
-        transition: "all 0.5s",
-    });
-    $('header').css({
-        opacity: "0",
-        visibility: "hidden",
-        zIndex: "-1",
-        transition: "all 0.5s",
-    });
-});

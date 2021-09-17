@@ -11,7 +11,31 @@ section{
     position: relative;
     overflow: hidden;
 }
-
+.container{
+    padding: 20px;
+}
+#main, #header{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 8px 8px rgba(90, 182, 224, 0.5);
+    border-radius: 10px;
+    background-color: transparent;
+}
+#header{
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+    flex-direction: column;
+    margin-top: 20px;
+}
+#main{
+    flex-direction: column;
+    margin-top: 20px;
+}
 .choice-section .col{
     background: url('sky.jpg');
     background-repeat: no-repeat !important;
@@ -72,7 +96,8 @@ section{
     height: 100%;
     width: 100%;
     position: absolute;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-content: space-around;
     justify-content: space-evenly;
     left: -100%;
@@ -140,22 +165,22 @@ section{
     border-radius: 0px;
     transition: all 0.5s ease-in-out;
 }
-section header{
+
+
+/* section header{
     height: 100%;
     width: 100%;
     position: relative;
-    display: grid;
+    display: flex;
     align-content: space-around;
     justify-content: space-evenly;
-    grid-template-rows: 10vh 35vh 35vh;
-    grid-template-columns: 0.90fr;
     opacity: 0;
     visibility: hidden;
     z-index: -1;
-    box-shadow: 0px 0px 5px 5px rgba(233, 226, 226, 0.5);
+    box-shadow: 0px 0px 8px 8px rgba(109, 148, 192, 0.5);
     border-radius: 10px;
-    background-color: transparent;
-}
+    background-color: transparent; */
+/* } */
 
 .location{
     display: flex;
@@ -187,28 +212,28 @@ section header{
     justify-content: space-evenly;
 }
 
-.current-wheather{
+.current-weather{
     height: 20vh;
     width: 10vw;
-    display: grid;
-    align-content: space-around;
+    display: block;
+    /* align-content: space-around;
     justify-content: space-evenly;
-    justify-items: center;
-}
+    justify-items: center; */
+    margin:auto;
+} 
 
 .weather-img>img{
-    height: 20vh;
+    height: 15vh;
 }
 
-.current-wheather>span{
-    color: #323232;
-    font-weight: lighter;
-    font-size: 1.5rem;
-    text-transform: uppercase;
+.current-weather>span{
+    color: #291e1e;
+    font-size: 2rem;
+    text-transform: capitalize;
     letter-spacing: 1px;
 }
 
-.temprature{
+.temperature{
     height: 15vh;
     width: 13vw;
     display: grid;
@@ -274,27 +299,27 @@ section header{
 }
 
 .sec-row{
-    display: grid;
-    grid-template-rows: 0.99fr;
-    grid-template-columns: 0.99fr;
-    align-content: space-around;
-    justify-content: space-evenly;
+    display: flex;
+    background-color: #99c0d6;
+    /* grid-template-rows: 0.99fr;
+    grid-template-columns: 0.99fr; */
+    align-items: center;
+    justify-content: space-around;
 }
 
-.sec-row>ul{
+.sec-row{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.sec-row>ul>li{
-    display: grid;
-    align-content: space-around;
-    justify-content: space-evenly;
-    justify-items: center;
+.sec-row .day1, .day2, .day3, .day4, .day5{
+    display: block;
+    align-items: center;
+    justify-content: center;
 }
 
-.sec-row>ul>li>img{
+.sec-row img{
     height: 12vh;
     width: 7vw;
 }
@@ -326,9 +351,4 @@ section header{
     width: 100vw;
     opacity: 0;
     visibility: hidden;
-}
-
-.container{
-    margin-top: 50px;
-    padding: 20px;
 }
